@@ -1,6 +1,10 @@
-import Card from './UI/Card';
+import { useDispatch } from 'react-redux';
+
+import { selectedActions } from '../store/selected';
 
 const PokemonCard = props => {
+  const dispatch = useDispatch();
+
   const { info } = props;
 
   const types = () => {
@@ -15,17 +19,20 @@ const PokemonCard = props => {
     return typeString;
   };
 
-  //   const onClickHandler = () => {
-
-  //   }
+  const onClickHandler = () => {
+    // console.log(info);
+    // dispatch(selectedActions.change('hi'));
+    dispatch(selectedActions.change(info));
+    // console.log('card clicked!');
+  };
 
   return (
-    <Card>
+    <div onClick={onClickHandler} style={{ backgroundColor: 'gray' }}>
       <h2>{info.name}</h2>
       <p>Height: {info.height}</p>
       <p>Width: {info.weight}</p>
       <p>Types: {types()}</p>
-    </Card>
+    </div>
   );
 };
 

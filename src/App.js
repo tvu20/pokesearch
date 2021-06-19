@@ -3,6 +3,7 @@ import './App.css';
 import { useState, useEffect, useCallback } from 'react';
 
 import Header from './components/UI/Header';
+import SelectedPokemon from './components/SelectedPokemon';
 import PokemonDisplay from './components/PokemonDisplay';
 
 function App() {
@@ -76,7 +77,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
-
+      <SelectedPokemon />
       <PokemonDisplay pokemon={pokemonData} />
     </div>
   );
