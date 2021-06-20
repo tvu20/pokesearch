@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initSelectedState = {
+  show: false,
   id: '',
   name: '',
   height: '',
@@ -21,6 +22,9 @@ const selectedSlice = createSlice({
       state.types = action.payload.types;
       state.stats = action.payload.stats;
       state.sprites = action.payload.sprites;
+    },
+    toggle(state) {
+      state.show = !state.show;
     },
   },
 });

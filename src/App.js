@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Header from './components/UI/Header';
 import SelectedPokemon from './components/SelectedPokemon';
 import PokemonDisplay from './components/PokemonDisplay';
+import PokemonModal from './components/PokemonModal';
 
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -78,6 +79,7 @@ function App() {
     <div className='App'>
       <Header />
       <SelectedPokemon />
+      {/* <PokemonModal /> */}
       <PokemonDisplay pokemon={pokemonData} />
     </div>
   );

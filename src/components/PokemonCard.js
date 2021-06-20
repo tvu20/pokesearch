@@ -23,6 +23,7 @@ const PokemonCard = props => {
     // console.log(info);
     // dispatch(selectedActions.change('hi'));
     dispatch(selectedActions.change(info));
+    dispatch(selectedActions.toggle());
     // console.log('card clicked!');
   };
 

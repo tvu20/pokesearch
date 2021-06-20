@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import PokemonModal from './PokemonModal';
+
 const SelectedPokemon = () => {
   const selected = useSelector(state => state.selected);
 
@@ -9,7 +11,12 @@ const SelectedPokemon = () => {
     }
   };
 
-  return <div>{formatOutput()}</div>;
+  return (
+    <div>
+      <PokemonModal />
+      {/* {formatOutput()} */}
+    </div>
+  );
 };
 
 export default SelectedPokemon;

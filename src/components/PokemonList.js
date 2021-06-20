@@ -1,18 +1,18 @@
 import PokemonCard from './PokemonCard';
 
 const PokemonList = props => {
-  const { search, type } = props;
+  const { search, type, pokemon } = props;
 
   const displayPokemon = () => {
     let display = [];
 
     // handling type filter
     if (type !== '' && type.length > 0) {
-      display = props.pokemon.filter(poke => {
+      display = pokemon.filter(poke => {
         return poke.types.includes(type);
       });
     } else {
-      display = props.pokemon;
+      display = pokemon;
     }
 
     // no search query
