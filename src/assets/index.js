@@ -1,10 +1,6 @@
 import testImg from '../assets/test.png';
 
 const TYPES = [
-  //   {
-  //     name: '',
-  //     img: '',
-  //   },
   {
     name: 'grass',
     img: testImg,
