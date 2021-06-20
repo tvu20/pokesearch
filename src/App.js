@@ -3,9 +3,9 @@ import './App.css';
 import { useState, useEffect, useCallback } from 'react';
 
 import Header from './components/UI/Header';
-import SelectedPokemon from './components/SelectedPokemon';
-import PokemonDisplay from './components/PokemonDisplay';
+// import SelectedPokemon from './components/SelectedPokemon';
 import PokemonModal from './components/PokemonModal';
+import PokemonDisplay from './components/PokemonDisplay';
 
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -16,34 +16,41 @@ function App() {
   const fetchPokemon = useCallback(async () => {
     setLoading(true);
 
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100');
+    try {
+      const response = await fetch(
+        'https://pokeapi.co/api/v2/pokemon?limit=151'
+      );
 
-    if (!response.ok) {
-      throw new Error('Something went wrong!');
+      if (!response.ok) {
+        throw new Error('Something went wrong!');
+      }
+
+      const data = await response.json();
+
+      let pokemonList = [];
+
+      for (let i = 0; i < data.results.length; i++) {
+        const curr = data.results[i];
+        let responseSingle = await fetch(curr.url);
+        let poke = await responseSingle.json();
+
+        pokemonList.push({
+          id: poke.id,
+          name: poke.name,
+          height: poke.height,
+          weight: poke.weight,
+          types: retrieveTypes(poke),
+          stats: cleanUpStats(poke.stats),
+          sprites: poke.sprites.other,
+        });
+      }
+
+      setPokemonData(pokemonList);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+      // will add proper error handling later
     }
-
-    const data = await response.json();
-
-    let pokemonList = [];
-
-    for (let i = 0; i < data.results.length; i++) {
-      const curr = data.results[i];
-      let responseSingle = await fetch(curr.url);
-      let poke = await responseSingle.json();
-
-      pokemonList.push({
-        id: poke.id,
-        name: poke.name,
-        height: poke.height,
-        weight: poke.weight,
-        types: retrieveTypes(poke),
-        stats: cleanUpStats(poke.stats),
-        sprites: poke.sprites.other,
-      });
-    }
-
-    setPokemonData(pokemonList);
-    setLoading(false);
   }, []);
 
   // fetches data upon app rendering
@@ -78,9 +85,9 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <SelectedPokemon />
-      {/* <PokemonModal /> */}
-      <PokemonDisplay pokemon={pokemonData} />
+      <PokemonModal />
+      {loading && <p>Loading...</p>}
+      {!loading && <PokemonDisplay pokemon={pokemonData} />}
     </div>
   );
 }

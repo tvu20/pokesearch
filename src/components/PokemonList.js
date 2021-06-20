@@ -1,39 +1,38 @@
+import { useRef, useCallback } from 'react';
+
 import PokemonCard from './PokemonCard';
 
 const PokemonList = props => {
-  const { search, type, pokemon } = props;
+  const { pokemon, hasMore, updatePage } = props;
+
+  const observer = useRef();
+  const lastCardRef = useCallback(
+    node => {
+      if (observer.current) observer.current.disconnect();
+      observer.current = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && hasMore) {
+          updatePage();
+          //   console.log('visible');
+        }
+      });
+
+      if (node) observer.current.observe(node);
+    },
+    [hasMore, updatePage]
+  );
 
   const displayPokemon = () => {
-    let display = [];
+    return pokemon.map((poke, index) => {
+      // last element
+      if (pokemon.length === index + 1) {
+        return <PokemonCard ref={lastCardRef} key={poke.id} info={poke} />;
+      }
 
-    // handling type filter
-    if (type !== '' && type.length > 0) {
-      display = pokemon.filter(poke => {
-        return poke.types.includes(type);
-      });
-    } else {
-      display = pokemon;
-    }
-
-    // no search query
-    if (search === '' || search.length === 0)
-      return display.map(poke => {
-        return <PokemonCard key={poke.id} info={poke} />;
-      });
-
-    // yes search query
-    return display.map(poke =>
-      poke.name.includes(search) ? (
-        <PokemonCard key={poke.id} info={poke} />
-      ) : null
-    );
+      return <PokemonCard key={poke.id} info={poke} />;
+    });
   };
 
-  return (
-    <div>
-      <div>{displayPokemon()}</div>
-    </div>
-  );
+  return <div>{displayPokemon()}</div>;
 };
 
 export default PokemonList;

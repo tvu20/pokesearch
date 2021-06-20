@@ -1,8 +1,10 @@
+import React from 'react';
+
 import { useDispatch } from 'react-redux';
 
 import { selectedActions } from '../store/selected';
 
-const PokemonCard = props => {
+const PokemonCard = React.forwardRef((props, ref) => {
   const dispatch = useDispatch();
 
   const { info } = props;
@@ -27,14 +29,17 @@ const PokemonCard = props => {
     // console.log('card clicked!');
   };
 
+  const imageUrl = info.sprites.dream_world.front_default;
+
   return (
-    <div onClick={onClickHandler} style={{ backgroundColor: 'gray' }}>
+    <div ref={ref} onClick={onClickHandler} style={{ backgroundColor: 'gray' }}>
       <h2>{info.name}</h2>
       <p>Height: {info.height}</p>
       <p>Width: {info.weight}</p>
       <p>Types: {types()}</p>
+      <img src={imageUrl} height='100px' alt='sprite' />
     </div>
   );
-};
+});
 
 export default PokemonCard;
