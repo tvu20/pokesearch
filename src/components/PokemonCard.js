@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-
 import { useDispatch } from 'react-redux';
+
+import TypeIcon from './Types/TypeIcon';
+
+import TYPES from '../assets';
 
 import { selectedActions } from '../store/selected';
 
@@ -13,16 +16,23 @@ const PokemonCard = React.forwardRef((props, ref) => {
 
   const { info } = props;
 
-  const types = () => {
-    let types = info.types;
+  const capitalize = text => {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  };
 
-    let typeString = '';
-
-    for (let i = 0; i < types.length; i++) {
-      typeString = typeString + types[i] + ' ';
-    }
-
-    return typeString;
+  const renderTypes = () => {
+    return info.types.map(type => {
+      const findImage = TYPES.find(t => t.name === type).img;
+      return (
+        <TypeIcon
+          image={findImage}
+          type={type}
+          height='30px'
+          width='30px'
+          className='pokemon-card__badge'
+        />
+      );
+    });
   };
 
   const onClickHandler = () => {
@@ -48,10 +58,11 @@ const PokemonCard = React.forwardRef((props, ref) => {
       onClick={onClickHandler}
       onMouseEnter={bumpHandler}
     >
-      <h2>{info.name}</h2>
+      <h2>{capitalize(info.name)}</h2>
       <p>#{info.id}</p>
-      <p>Types: {types()}</p>
-      <img src={imageUrl} height='100px' alt='sprite' />
+      <img src={imageUrl} height='150px' alt='sprite' />
+      <div className='pokemon-card__badges'>{renderTypes()}</div>
+      {/* <p>Types: {types()}</p> */}
     </div>
   );
 });

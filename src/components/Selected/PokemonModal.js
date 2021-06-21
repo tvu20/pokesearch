@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Modal from '../UI/Modal';
-import TypeButton from '../Types/TypeButton';
+import TypeBadge from '../Types/TypeBadge';
 import ChartBar from '../UI/ChartBar';
 
 import { selectedActions } from '../../store/selected';
@@ -25,13 +25,7 @@ const PokemonModal = () => {
 
   const renderTypes = () => {
     return info.types.map(type => {
-      return (
-        <TypeButton
-          key={type}
-          name={type}
-          style={{ marginLeft: '0px', paddingLeft: '0px', marginRight: '15px' }}
-        />
-      );
+      return <TypeBadge key={type} name={type} />;
     });
   };
 

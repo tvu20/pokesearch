@@ -15,12 +15,17 @@ const TypeIcon = props => {
 
   return (
     <img
-      className='type-button__img'
+      className={`type-button__img ${props.className}`}
+      // className='type-button__img'
       src={props.image[0]}
       //   src={hover ? props.image[0] : props.image[1]}
       onMouseEnter={hoverHandler}
       onMouseLeave={leaveHandler}
       alt={props.type}
+      style={{
+        height: props.height ? props.height : null,
+        width: props.width ? props.width : null,
+      }}
     ></img>
   );
 };

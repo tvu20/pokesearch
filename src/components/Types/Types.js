@@ -13,12 +13,15 @@ const Types = props => {
   const [typeSelected, setTypeSelected] = useState('');
 
   const onClickHandler = type => {
-    if (!type.length) {
+    if (type === typeSelected) {
+      console.log('resetting');
       props.onSelect('');
       setTypeSelected('');
+    } else {
+      console.log(type);
+      props.onSelect(type);
+      setTypeSelected(type);
     }
-    props.onSelect(type);
-    setTypeSelected(type);
   };
 
   const typeButtons = () => {
@@ -37,9 +40,9 @@ const Types = props => {
 
   return (
     <React.Fragment>
-      <Button className='type-button' onClick={onClickHandler}>
+      {/* <Button className='type-button' onClick={onClickHandler}>
         No filter
-      </Button>
+      </Button> */}
       <div className='type-container'>{typeButtons()}</div>
     </React.Fragment>
   );

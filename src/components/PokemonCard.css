@@ -12,6 +12,31 @@
   background-color: white;
   border-radius: 15px;
   cursor: pointer;
+  padding: 15px 5px;
+}
+
+.pokemon-card h2 {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.pokemon-card p {
+  font-size: 18px;
+  margin: 10px 0 15px;
+}
+
+.pokemon-card img {
+  margin-bottom: 5px;
+}
+
+.pokemon-card__badges {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.pokemon-card__badge {
+  margin: 0 5px;
 }
 
 .bump {

@@ -6,6 +6,8 @@ import TYPES from '../../assets/index';
 import './TypeButton.css';
 
 const TypeButton = props => {
+  const { selected } = props;
+
   const clickHandler = () => {
     if (props.onClick) {
       props.onClick(props.name);
@@ -16,9 +18,9 @@ const TypeButton = props => {
 
   return (
     <Button
-      style={props.style}
+      style={{ filter: selected ? 'grayscale(0%)' : 'grayscale(100%)' }}
       onClick={clickHandler}
-      className={`type-button ${props.selected ? 'selected' : ''}`}
+      className='type-button'
     >
       <TypeIcon image={findImage} type={props.name} />
     </Button>
