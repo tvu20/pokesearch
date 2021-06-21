@@ -1,16 +1,24 @@
-import TypeButton from './TypeButton';
-import Button from './UI/Button';
+import React from 'react';
 
-import TYPES from '../assets/index';
+import TypeButton from './TypeButton';
+import Button from '../UI/Button';
+
+import { useState } from 'react';
+
+import TYPES from '../../assets/index';
 
 import './TypeButton.css';
 
 const Types = props => {
+  const [typeSelected, setTypeSelected] = useState('');
+
   const onClickHandler = type => {
     if (!type.length) {
       props.onSelect('');
+      setTypeSelected('');
     }
     props.onSelect(type);
+    setTypeSelected(type);
   };
 
   const typeButtons = () => {
@@ -21,18 +29,19 @@ const Types = props => {
           onClick={onClickHandler}
           name={type.name}
           image={type.img}
+          selected={typeSelected === type.name}
         />
       );
     });
   };
 
   return (
-    <div className='type-container'>
+    <React.Fragment>
       <Button className='type-button' onClick={onClickHandler}>
         No filter
       </Button>
-      {typeButtons()}
-    </div>
+      <div className='type-container'>{typeButtons()}</div>
+    </React.Fragment>
   );
 };
 

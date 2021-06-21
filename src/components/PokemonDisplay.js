@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 
-import SearchBar from './SearchBar';
-import Types from './Types';
+import SearchBar from './UI/SearchBar';
+import Types from './Types/Types';
 import PokemonList from './PokemonList';
 
 const NUM_PER_PAGE = 20;

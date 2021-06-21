@@ -2,6 +2,8 @@ import { useRef, useCallback } from 'react';
 
 import PokemonCard from './PokemonCard';
 
+import './PokemonCard.css';
+
 const PokemonList = props => {
   const { pokemon, hasMore, updatePage } = props;
 
@@ -22,6 +24,8 @@ const PokemonList = props => {
   );
 
   const displayPokemon = () => {
+    if (pokemon.length === 0) return <p>No matches found.</p>;
+
     return pokemon.map((poke, index) => {
       // last element
       if (pokemon.length === index + 1) {
@@ -32,7 +36,7 @@ const PokemonList = props => {
     });
   };
 
-  return <div>{displayPokemon()}</div>;
+  return <div className='pokemon-list'>{displayPokemon()}</div>;
 };
 
 export default PokemonList;

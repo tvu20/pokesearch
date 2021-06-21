@@ -8,12 +8,26 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.modal {
+.modal-container {
+  width: 100vw;
+  height: 100vh;
   position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+}
+
+.modal {
+  /* position: fixed;
   top: 15vh;
   left: 5%;
-  width: 90%;
+  right: 5%; */
+  max-width: 90vw;
   background-color: white;
+  /* margin: 50px; */
   padding: 1rem;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
@@ -23,8 +37,9 @@
 
 @media (min-width: 768px) {
   .modal {
-    width: 40rem;
-    left: calc(50% - 20rem);
+    width: 60rem;
+    /* left: calc(50% - 20rem);
+    right: calc(50% - 20rem); */
   }
 }
 

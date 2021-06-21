@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useDispatch } from 'react-redux';
 
 import { selectedActions } from '../store/selected';
 
+import './PokemonCard.css';
+
 const PokemonCard = React.forwardRef((props, ref) => {
+  const [bump, setBump] = useState(false);
+
   const dispatch = useDispatch();
 
   const { info } = props;
@@ -22,20 +26,30 @@ const PokemonCard = React.forwardRef((props, ref) => {
   };
 
   const onClickHandler = () => {
-    // console.log(info);
-    // dispatch(selectedActions.change('hi'));
     dispatch(selectedActions.change(info));
     dispatch(selectedActions.toggle());
-    // console.log('card clicked!');
   };
 
-  const imageUrl = info.sprites.dream_world.front_default;
+  const imageUrl = info.sprites['official-artwork'].front_default;
+
+  const bumpHandler = () => {
+    console.log('bump');
+    setBump(true);
+
+    setTimeout(() => {
+      setBump(false);
+    }, 300);
+  };
 
   return (
-    <div ref={ref} onClick={onClickHandler} style={{ backgroundColor: 'gray' }}>
+    <div
+      className={`pokemon-card ${bump ? 'bump' : ''}`}
+      ref={ref}
+      onClick={onClickHandler}
+      onMouseEnter={bumpHandler}
+    >
       <h2>{info.name}</h2>
-      <p>Height: {info.height}</p>
-      <p>Width: {info.weight}</p>
+      <p>#{info.id}</p>
       <p>Types: {types()}</p>
       <img src={imageUrl} height='100px' alt='sprite' />
     </div>

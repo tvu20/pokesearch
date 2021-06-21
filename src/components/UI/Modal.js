@@ -8,9 +8,8 @@ const Backdrop = props => {
 
 const ModalOverlay = props => {
   return (
-    <div className='modal'>
-      <div>{props.children}</div>
-      <button onClick={props.onClose}>Close modal</button>
+    <div className='modal-container'>
+      <div className='modal'>{props.children}</div>
     </div>
   );
 };

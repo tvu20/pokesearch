@@ -1,28 +1,95 @@
-import testImg from '../assets/test.png';
+import normal from '../assets/normal.png';
+import fire from '../assets/fire.png';
+import water from '../assets/water.png';
+import grass from '../assets/grass.png';
+import electric from '../assets/electric.png';
+import ice from '../assets/ice.png';
+import fighting from '../assets/fighting.png';
+import poison from '../assets/poison.png';
+import ground from '../assets/ground.png';
+import flying from '../assets/flying.png';
+import psychic from '../assets/psychic.png';
+import bug from '../assets/bug.png';
+import rock from '../assets/rock.png';
+import ghost from '../assets/ghost.png';
+import dark from '../assets/dark.png';
+import dragon from '../assets/dragon.png';
+import steel from '../assets/steel.png';
+import fairy from '../assets/fairy.png';
 
 const TYPES = [
   {
-    name: 'grass',
-    img: testImg,
-    // img: 'https://image.flaticon.com/icons/png/512/785/785136.png',
-  },
-  {
-    name: 'poison',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Pok%C3%A9mon_Poison_Type_Icon.svg/480px-Pok%C3%A9mon_Poison_Type_Icon.svg.png',
+    name: 'normal',
+    img: [normal, normal],
   },
   {
     name: 'fire',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1501px-FireIcon.svg.png',
+    img: [fire, fire],
   },
-
-  //   '',
-  //   'grass',
-  //   'poison',
-  //   'fire',
-  //   'flying',
-  //   'water',
-  //   'bug',
-  //   'normal',
+  {
+    name: 'water',
+    img: [water, water],
+  },
+  {
+    name: 'grass',
+    img: [grass, grass],
+  },
+  {
+    name: 'electric',
+    img: [electric, electric],
+  },
+  {
+    name: 'ice',
+    img: [ice, ice],
+  },
+  {
+    name: 'fighting',
+    img: [fighting, fighting],
+  },
+  {
+    name: 'poison',
+    img: [poison, poison],
+  },
+  {
+    name: 'ground',
+    img: [ground, ground],
+  },
+  {
+    name: 'flying',
+    img: [flying, flying],
+  },
+  {
+    name: 'psychic',
+    img: [psychic, psychic],
+  },
+  {
+    name: 'bug',
+    img: [bug, bug],
+  },
+  {
+    name: 'rock',
+    img: [rock, rock],
+  },
+  {
+    name: 'ghost',
+    img: [ghost, ghost],
+  },
+  {
+    name: 'dark',
+    img: [dark, dark],
+  },
+  {
+    name: 'dragon',
+    img: [dragon, dragon],
+  },
+  {
+    name: 'steel',
+    img: [steel, steel],
+  },
+  {
+    name: 'fairy',
+    img: [fairy, fairy],
+  },
 ];
 
 export default TYPES;

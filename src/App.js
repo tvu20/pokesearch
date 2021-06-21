@@ -3,9 +3,11 @@ import './App.css';
 import { useState, useEffect, useCallback } from 'react';
 
 import Header from './components/UI/Header';
-// import SelectedPokemon from './components/SelectedPokemon';
-import PokemonModal from './components/PokemonModal';
+import LoadingSpinner from './components/UI/LoadingSpinner';
+import PokemonModal from './components/Selected/PokemonModal';
 import PokemonDisplay from './components/PokemonDisplay';
+
+const NUM_FETCHED = 151;
 
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -18,7 +20,7 @@ function App() {
 
     try {
       const response = await fetch(
-        'https://pokeapi.co/api/v2/pokemon?limit=151'
+        `https://pokeapi.co/api/v2/pokemon?limit=${NUM_FETCHED}`
       );
 
       if (!response.ok) {
@@ -84,10 +86,14 @@ function App() {
 
   return (
     <div className='App'>
-      <Header />
+      {loading && <LoadingSpinner />}
       <PokemonModal />
-      {loading && <p>Loading...</p>}
-      {!loading && <PokemonDisplay pokemon={pokemonData} />}
+      {!loading && (
+        <div className='fade-in'>
+          <Header />
+          <PokemonDisplay pokemon={pokemonData} />
+        </div>
+      )}
     </div>
   );
 }

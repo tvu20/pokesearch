@@ -19,6 +19,7 @@ const selectedSlice = createSlice({
       state.id = action.payload.id;
       state.name = action.payload.name;
       state.height = action.payload.height;
+      state.weight = action.payload.weight;
       state.types = action.payload.types;
       state.stats = action.payload.stats;
       state.sprites = action.payload.sprites;

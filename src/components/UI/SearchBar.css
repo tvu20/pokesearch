@@ -1,0 +1,9 @@
+.search-bar {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  width: 700px;
+  max-width: 70vw;
+}
