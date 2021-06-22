@@ -25,6 +25,7 @@ const PokemonCard = React.forwardRef((props, ref) => {
       const findImage = TYPES.find(t => t.name === type).img;
       return (
         <TypeIcon
+          key={type}
           image={findImage}
           type={type}
           height='30px'
@@ -43,7 +44,7 @@ const PokemonCard = React.forwardRef((props, ref) => {
   const imageUrl = info.sprites['official-artwork'].front_default;
 
   const bumpHandler = () => {
-    console.log('bump');
+    // console.log('bump');
     setBump(true);
 
     setTimeout(() => {

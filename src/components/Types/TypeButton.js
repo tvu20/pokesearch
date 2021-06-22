@@ -22,7 +22,7 @@ const TypeButton = props => {
       onClick={clickHandler}
       className='type-button'
     >
-      <TypeIcon image={findImage} type={props.name} />
+      <TypeIcon key={props.name} image={findImage} type={props.name} />
     </Button>
   );
 };

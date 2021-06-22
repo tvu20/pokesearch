@@ -14,11 +14,11 @@ const Types = props => {
 
   const onClickHandler = type => {
     if (type === typeSelected) {
-      console.log('resetting');
+      // console.log('resetting');
       props.onSelect('');
       setTypeSelected('');
     } else {
-      console.log(type);
+      // console.log(type);
       props.onSelect(type);
       setTypeSelected(type);
     }

@@ -1,0 +1,30 @@
+footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.footer__link {
+  font-size: 40px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  color: #50496d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0em 0.4em;
+  opacity: 0.8;
+  /* transition: all 0.15s;
+  transform-origin: 50% 50%; */
+}
+
+.footer__link:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+@media (min-width: 769px) {
+  .footer__link {
+    margin: 0em 0.75em;
+  }
+}

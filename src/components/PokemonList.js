@@ -24,12 +24,13 @@ const PokemonList = props => {
   );
 
   const displayPokemon = () => {
-    if (pokemon.length === 0) return <p>No matches found.</p>;
+    if (pokemon.length === 0)
+      return <p className='pokemon-list__nomatch'>No matches found.</p>;
 
     return pokemon.map((poke, index) => {
       // last element
       if (pokemon.length === index + 1) {
-        return <PokemonCard ref={lastCardRef} key={poke.id} info={poke} />;
+        return <PokemonCard key={poke.id} ref={lastCardRef} info={poke} />;
       }
 
       return <PokemonCard key={poke.id} info={poke} />;

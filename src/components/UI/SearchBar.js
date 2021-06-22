@@ -7,12 +7,17 @@ const SearchBar = props => {
 
   const onChangeHandler = event => {
     setSearch(event.target.value);
-    props.onSearch(event.target.value);
+    props.onSearch(event.target.value.toLowerCase());
   };
 
   return (
     <form>
-      <input className='search-bar' value={search} onChange={onChangeHandler} />
+      <input
+        className='search-bar'
+        value={search}
+        onChange={onChangeHandler}
+        placeholder='Search name'
+      />
     </form>
   );
 };

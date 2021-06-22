@@ -4,6 +4,7 @@ const LoadingSpinner = () => {
   return (
     <div className='loader'>
       <svg
+        className='loading-spinner'
         version='1.1'
         id='Ebene_1'
         // xmlns='http://www.w3.org/2000/svg'

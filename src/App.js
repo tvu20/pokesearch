@@ -6,6 +6,7 @@ import Header from './components/UI/Header';
 import LoadingSpinner from './components/UI/LoadingSpinner';
 import PokemonModal from './components/Selected/PokemonModal';
 import PokemonDisplay from './components/PokemonDisplay';
+import Footer from './components/UI/Footer';
 
 const NUM_FETCHED = 151;
 
@@ -91,7 +92,8 @@ function App() {
       {!loading && (
         <div className='fade-in'>
           <Header />
-          <PokemonDisplay pokemon={pokemonData} />
+          <PokemonDisplay className='fade-late' pokemon={pokemonData} />
+          <Footer />
         </div>
       )}
     </div>

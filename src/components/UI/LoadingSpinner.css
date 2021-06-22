@@ -134,7 +134,7 @@
   }
 }
 
-svg {
+svg.loading-spinner {
   width: 150px;
   animation: animationFrames ease-in-out 1.5s;
   /* animation: animationFrames ease-in-out 1.2s; */

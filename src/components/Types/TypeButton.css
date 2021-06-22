@@ -2,9 +2,12 @@
   /* border: 1px solid black; */
   width: 100%;
   display: flex;
-  align-content: flex-start;
+  align-content: flex-end;
   justify-content: center;
   flex-wrap: wrap;
+  /* background-color: blue; */
+  height: 15vh;
+  padding-bottom: 5vh;
 }
 
 .type-button {

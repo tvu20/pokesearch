@@ -11,7 +11,7 @@
   width: 100%;
   /* border: 1px solid #313131; */
   border-radius: 12px;
-
+  /* background-color: rgba(144, 81, 187, 0.2); */
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -19,7 +19,7 @@
 }
 
 .chart-bar__fill {
-  background-color: #4826b9;
+  background-color: rgb(144, 81, 187);
   width: 100%;
   transition: all 0.3s ease-in-out;
   border-radius: 12px;
@@ -40,7 +40,7 @@
   }
 
   .chart-bar__inner {
-    background-color: #c3b4f3;
+    background-color: rgba(144, 81, 187, 0.2);
   }
 }
 

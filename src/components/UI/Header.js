@@ -1,5 +1,13 @@
+import pokelogo from '../../assets/pokelogo.png';
+
+import './Header.css';
+
 const Header = () => {
-  return <h1>Pokesearch</h1>;
+  return (
+    <div className='header'>
+      <img src={pokelogo} />
+    </div>
+  );
 };
 
 export default Header;
