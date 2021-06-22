@@ -13,7 +13,6 @@ const NUM_FETCHED = 151;
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
   const [loading, setLoading] = useState(false);
-  // const [pokemon, setPokemon] = useState({});
 
   // fetch handler
   const fetchPokemon = useCallback(async () => {
@@ -52,7 +51,6 @@ function App() {
       setLoading(false);
     } catch (err) {
       console.log(err);
-      // will add proper error handling later
     }
   }, []);
 

@@ -17,10 +17,6 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: right bottom;
-  /* position: fixed;
-  top: 15vh;
-  left: 5%;
-  right: 5%; */
   max-width: 90vw;
   background-color: white;
   margin: 50px;
@@ -43,9 +39,6 @@
   .modal {
     width: 60rem;
     background-image: url('../../assets/modaltablet.png');
-    /* background-position: initial; */
-    /* left: calc(50% - 20rem);
-    right: calc(50% - 20rem); */
   }
 }
 

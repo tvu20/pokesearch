@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* margin-bottom: 50px; */
   margin: 0 40px 50px;
 }
 

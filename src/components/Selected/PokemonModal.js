@@ -73,9 +73,11 @@ const PokemonModal = () => {
     <React.Fragment>
       {showModal && (
         <Modal onClose={closeModalHandler}>
-          <h2 className='pokemon-modal__title-mobile'>
-            {capitalize(info.name)}
-          </h2>
+          <div style={{ marginTop: '20px' }}>
+            <h2 className='pokemon-modal__title-mobile'>
+              {capitalize(info.name)}
+            </h2>
+          </div>
           {modalContent()}
           <div className='pokemon-modal__bottom'>
             <button

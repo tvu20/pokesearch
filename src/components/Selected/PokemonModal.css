@@ -9,7 +9,6 @@
   text-align: left;
   margin-top: 20px;
   margin-bottom: 0px;
-  /* margin-bottom: 20px; */
 }
 
 .pokemon-modal__title-mobile {
@@ -20,7 +19,6 @@
   flex-grow: 0.5;
   padding-top: 50px;
   width: 300px;
-  /* background-color: red; */
   height: auto;
 }
 
@@ -112,8 +110,6 @@
     padding-top: 0px;
     left: 0;
     width: auto;
-    /* width: 300px; */
-    /* background-color: red; */
     height: 25vh;
     margin-bottom: 10px;
   }
@@ -140,8 +136,6 @@
     display: flex;
     justify-content: center;
     margin-left: 15px;
-    /* background-color: blue; */
-    /* margin-bottom: 20px; */
   }
 
   .pokemon-modal__bottom {

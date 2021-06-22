@@ -20,75 +20,75 @@ import fairy from '../assets/fairy.png';
 const TYPES = [
   {
     name: 'normal',
-    img: [normal, normal],
+    img: normal,
   },
   {
     name: 'fire',
-    img: [fire, fire],
+    img: fire,
   },
   {
     name: 'water',
-    img: [water, water],
+    img: water,
   },
   {
     name: 'grass',
-    img: [grass, grass],
+    img: grass,
   },
   {
     name: 'electric',
-    img: [electric, electric],
+    img: electric,
   },
   {
     name: 'ice',
-    img: [ice, ice],
+    img: ice,
   },
   {
     name: 'fighting',
-    img: [fighting, fighting],
+    img: fighting,
   },
   {
     name: 'poison',
-    img: [poison, poison],
+    img: poison,
   },
   {
     name: 'ground',
-    img: [ground, ground],
+    img: ground,
   },
   {
     name: 'flying',
-    img: [flying, flying],
+    img: flying,
   },
   {
     name: 'psychic',
-    img: [psychic, psychic],
+    img: psychic,
   },
   {
     name: 'bug',
-    img: [bug, bug],
+    img: bug,
   },
   {
     name: 'rock',
-    img: [rock, rock],
+    img: rock,
   },
   {
     name: 'ghost',
-    img: [ghost, ghost],
+    img: ghost,
   },
   {
     name: 'dark',
-    img: [dark, dark],
+    img: dark,
   },
   {
     name: 'dragon',
-    img: [dragon, dragon],
+    img: dragon,
   },
   {
     name: 'steel',
-    img: [steel, steel],
+    img: steel,
   },
   {
     name: 'fairy',
-    img: [fairy, fairy],
+    img: fairy,
   },
 ];
 

@@ -7,10 +7,7 @@ const Footer = () => {
       <a
         className='footer__link'
         href='https://github.com/tvu20/pokesearch'
-        // target='_blank'
         title='PokeSearch on Github'
-        // rel='noreferrer'
-        // rel='noreferrer'
       >
         <span
           className='iconify'

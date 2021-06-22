@@ -1,7 +1,6 @@
 import React from 'react';
 
 import TypeButton from './TypeButton';
-import Button from '../UI/Button';
 
 import { useState } from 'react';
 
@@ -14,11 +13,9 @@ const Types = props => {
 
   const onClickHandler = type => {
     if (type === typeSelected) {
-      // console.log('resetting');
       props.onSelect('');
       setTypeSelected('');
     } else {
-      // console.log(type);
       props.onSelect(type);
       setTypeSelected(type);
     }
@@ -40,9 +37,6 @@ const Types = props => {
 
   return (
     <React.Fragment>
-      {/* <Button className='type-button' onClick={onClickHandler}>
-        No filter
-      </Button> */}
       <div className='type-container'>{typeButtons()}</div>
     </React.Fragment>
   );

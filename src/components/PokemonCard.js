@@ -44,7 +44,6 @@ const PokemonCard = React.forwardRef((props, ref) => {
   const imageUrl = info.sprites['official-artwork'].front_default;
 
   const bumpHandler = () => {
-    // console.log('bump');
     setBump(true);
 
     setTimeout(() => {
@@ -63,7 +62,6 @@ const PokemonCard = React.forwardRef((props, ref) => {
       <p>#{info.id}</p>
       <img src={imageUrl} height='150px' alt='sprite' />
       <div className='pokemon-card__badges'>{renderTypes()}</div>
-      {/* <p>Types: {types()}</p> */}
     </div>
   );
 });

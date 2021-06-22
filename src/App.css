@@ -3,20 +3,11 @@
 }
 
 body {
-  /* background-color: rgba(201, 245, 253, 0.87); */
-  /* background: url('./assets/background.jpeg') no-repeat center center fixed; */
   background-image: url('./assets/background.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* margin: 0 40px; */
-  font-family: 'Flexo Medium', arial, sans-serif;
-}
-
-/* TO BE DELETED */
-h1 {
-  font-size: 70px;
-  margin: 100px 0;
+  font-family: 'Ubuntu', arial, sans-serif;
 }
 
 .fade-in {

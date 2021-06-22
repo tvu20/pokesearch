@@ -13,7 +13,6 @@ const PokemonDisplay = props => {
   const [search, setSearch] = useState('');
   const [type, setType] = useState('');
 
-  // testing
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(false);
   const [cards, setCards] = useState([]);
@@ -45,15 +44,12 @@ const PokemonDisplay = props => {
       display = display.filter(poke => poke.name.includes(search));
     }
 
-    // console.log('number of hits: ', display.length);
-
     setCards(display.slice(0, page * NUM_PER_PAGE));
 
-    setHasMore(page * NUM_PER_PAGE < TOTAL_FETCHED); // hard coded
+    setHasMore(page * NUM_PER_PAGE < TOTAL_FETCHED);
   }, [type, search, page, pokemon]);
 
   useEffect(() => {
-    // console.log('changed something');
     updateCards();
   }, [pokemon, page, type, search, updateCards]);
 
