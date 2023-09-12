@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/pokesearch/static/css/main.cf0d3069.chunk.css",
+    "main.js": "/pokesearch/static/js/main.6d1cb674.chunk.js",
+    "main.js.map": "/pokesearch/static/js/main.6d1cb674.chunk.js.map",
+    "runtime-main.js": "/pokesearch/static/js/runtime-main.e91c197a.js",
+    "runtime-main.js.map": "/pokesearch/static/js/runtime-main.e91c197a.js.map",
+    "static/js/2.baadbb8c.chunk.js": "/pokesearch/static/js/2.baadbb8c.chunk.js",
+    "static/js/2.baadbb8c.chunk.js.map": "/pokesearch/static/js/2.baadbb8c.chunk.js.map",
+    "index.html": "/pokesearch/index.html",
+    "static/css/main.cf0d3069.chunk.css.map": "/pokesearch/static/css/main.cf0d3069.chunk.css.map",
+    "static/js/2.baadbb8c.chunk.js.LICENSE.txt": "/pokesearch/static/js/2.baadbb8c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/pokesearch/static/media/background.c13415e0.jpeg",
+    "static/media/bug.cb04290e.png": "/pokesearch/static/media/bug.cb04290e.png",
+    "static/media/fighting.9d51262a.png": "/pokesearch/static/media/fighting.9d51262a.png",
+    "static/media/fire.4993b547.png": "/pokesearch/static/media/fire.4993b547.png",
+    "static/media/ghost.67b092c0.png": "/pokesearch/static/media/ghost.67b092c0.png",
+    "static/media/ground.b6a9d88d.png": "/pokesearch/static/media/ground.b6a9d88d.png",
+    "static/media/ice.3c5e8719.png": "/pokesearch/static/media/ice.3c5e8719.png",
+    "static/media/Modal.css": "/pokesearch/static/media/modaltablet.709bf567.png",
+    "static/media/poison.5ad39bb9.png": "/pokesearch/static/media/poison.5ad39bb9.png",
+    "static/media/pokelogo.83f9b0f4.png": "/pokesearch/static/media/pokelogo.83f9b0f4.png",
+    "static/media/psychic.975eb2b4.png": "/pokesearch/static/media/psychic.975eb2b4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e91c197a.js",
+    "static/js/2.baadbb8c.chunk.js",
+    "static/css/main.cf0d3069.chunk.css",
+    "static/js/main.6d1cb674.chunk.js"
+  ]
+}
